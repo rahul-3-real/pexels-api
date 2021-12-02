@@ -1,0 +1,171 @@
+/* Imports */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Variables */
+:root {
+  /* Fonts */
+  --serif: "Playfair Display", serif;
+  --sans-serif: "Poppins", sans-serif;
+
+  /* Colors */
+  --primary: #ff8b5d;
+  --secondary: #03a488;
+  --dark: #17181a;
+  --dark-alt: #414d52;
+  --light: #ffffff;
+  --light-alt: #e0f2f1;
+
+  /* Shadow */
+  --shadow: 0 0.5rem 1rem #9898985e;
+}
+
+/* Default */
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+*::selection {
+  background: transparent;
+  color: inherit;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--light);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--sans-serif);
+  background: var(--light-alt);
+  overflow-x: hidden;
+  position: relative;
+}
+body.overflow-hide {
+  overflow: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+b,
+i,
+u,
+ul,
+ol,
+li,
+span {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+img,
+video {
+  width: 100%;
+}
+p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--dark-alt);
+}
+
+/* Background */
+.bg-primary {
+  background: var(--primary) !important;
+}
+.bg-secondary {
+  background: var(--secondary) !important;
+}
+.bg-light {
+  background: var(--light) !important;
+}
+.bg-light-alt {
+  background: var(--light-alt) !important;
+}
+.bg-dark {
+  background: var(--dark) !important;
+}
+.bg-dark-alt {
+  background: var(--dark-alt) !important;
+}
+
+/* Color */
+.text-primary {
+  color: var(--primary) !important;
+}
+.text-secondary {
+  color: var(--secondary) !important;
+}
+.text-light {
+  color: var(--light) !important;
+}
+.text-light-alt {
+  color: var(--light-alt) !important;
+}
+.text-dark {
+  color: var(--dark) !important;
+}
+.text-dark-alt {
+  color: var(--dark-alt) !important;
+}
+
+/* Utilities */
+.container {
+  width: 90%;
+  margin: auto;
+  position: relative;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between !important;
+}
+.g-1 {
+  gap: 1rem !important;
+}
+.g-2 {
+  gap: 2rem !important;
+}
+.g-3 {
+  gap: 3rem !important;
+}
+.g-4 {
+  gap: 4rem !important;
+}
+.g-5 {
+  gap: 5rem !important;
+}
+
+.btn {
+  border: 0;
+  outline: 0;
+  background: var(--primary);
+  color: var(--light);
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.5s ease all;
+}
+.btn:hover {
+  background: var(--secondary);
+}

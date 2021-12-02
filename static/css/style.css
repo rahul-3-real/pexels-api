@@ -1,0 +1,124 @@
+@import "./variables.css";
+
+/* Header */
+header {
+  width: 100%;
+  padding: 1rem 0;
+  background: var(--secondary);
+  box-shadow: var(--shadow);
+  position: relative;
+}
+header .logo a {
+  font-size: 2.5rem;
+  font-weight: 500;
+  font-family: var(--serif);
+  color: var(--light);
+}
+header .logo a b {
+  color: var(--primary);
+}
+header form {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+header form input {
+  width: 20rem;
+  height: 3rem;
+  border: 0;
+  outline: 0;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  border-radius: 0;
+}
+header form button {
+  width: 3rem;
+  height: 3rem;
+  background: var(--primary);
+  color: var(--light);
+  border: 0;
+  outline: 0;
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* Content */
+section {
+  width: 100%;
+  padding: 3rem 0;
+}
+section .center {
+  text-align: center;
+  margin-top: 2rem;
+}
+section .gallery {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+section .gallery .item {
+  width: 100%;
+  height: 30rem;
+  overflow: hidden;
+  background: var(--light);
+  box-shadow: var(--shadow);
+}
+section .gallery .item .image {
+  width: 100%;
+  height: 27rem;
+  overflow: hidden;
+}
+section .gallery .item .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+section .gallery .item .info {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  gap: 3rem;
+}
+section .gallery .item .info h6 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--dark);
+}
+section .gallery .item .info a {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--secondary);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  section .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 767px) {
+  header .row {
+    flex-direction: column;
+  }
+  header form {
+    margin-top: 15px;
+  }
+  header form input {
+    width: 15rem;
+  }
+  section .gallery {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  section .gallery .item,
+  section .gallery .item .image,
+  section .gallery .item .info {
+    height: auto !important;
+  }
+}
